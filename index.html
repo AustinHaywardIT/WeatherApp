@@ -2,38 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
   </head>
-  <body id="background" style="background-image: url(background/clear.jpg);">
-    <!--Location & weather icon section-->
-    <div class="container">
-      <div class="location">
-        <h1 class="location-timezone"></h1>
-        <div class="icons">
-          <img src="icons/unknown.png" alt="weather icon" />
-        </div>
+  <body id="background">
+    <div class="app-wrap">
+      <header>
+        <h2>Enter city and country code</h2>
+        <div class="form">
+        <input
+          type="text"
+          autocomplete="on"
+          id="search-box"
+          placeholder="Toronto, CA">
+        <a href="#to-weather"><input type="submit" value="Submit" id="button"/></a>
       </div>
-      <!--Temperature and weather description-->
-      <div id="temperature">
-        <div class="degree-section">
-          <h2 class="temperature-degree"></h2>
-          <h5 class="feels-like"></h5>
-        </div>
-        <div id="temperature-description">
-        </div>
-        <div class="wind-speed">
-        </div>
-        <!--Slideshow dots-->
-        <div class="info-dots">
-          <span id="dot1"></span>
-          <span id="dot2"></span>
-        </div>
+      </header>
+    <a name="to-weather"><main id="weather-container"></a>
+      <section class="location">
+          <div class="weather-icon">
+            <div class="city"></div>
+            <div class="icons">
+              <img src="" alt="" />
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+        <div class="current">
+          <div class="temp"><span></span></div>
+          <div id="descriptions">
+            <div class="feels-like"><span></span></div>
+            <div class="weather"></div>
+            <div class="wind"></div>
+            <div class="info-dots">
+              <span id="dot1"></span>
+              <span id="dot2"></span>
+            </div>
+            </div>
+          </div>
+      </main>
     </div>
+  </div>
     <script src="app.js"></script>
   </body>
 </html>
